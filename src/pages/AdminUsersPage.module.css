@@ -1,0 +1,253 @@
+/* AdminUsersPage.module.css */
+
+.page { display: flex; flex-direction: column; gap: 18px; }
+
+/* ── Page header ──────────────────────────────────────── */
+.pageHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.pageTitle {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.pageSub {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+/* ── Toolbar ──────────────────────────────────────────── */
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.searchWrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex: 1;
+  max-width: 400px;
+}
+
+.searchIco {
+  position: absolute;
+  left: 11px;
+  color: var(--text-muted);
+  font-size: 1rem;
+  pointer-events: none;
+}
+
+.searchInput {
+  width: 100%;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  color: var(--text-primary);
+  font-size: 0.875rem;
+  padding: 9px 14px 9px 34px;
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.searchInput:focus  { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-dim); }
+.searchInput::placeholder { color: var(--text-muted); }
+
+.refreshBtn {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  width: 38px;
+  height: 38px;
+  border-radius: var(--r-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s;
+  flex-shrink: 0;
+}
+.refreshBtn:hover { border-color: var(--accent-blue); color: var(--accent-blue); }
+
+.meta { font-size: 0.8rem; color: var(--text-muted); }
+
+/* ── Table ────────────────────────────────────────────── */
+.tableWrap {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--r-xl);
+  overflow: hidden;
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th {
+  padding: 12px 16px;
+  background: var(--bg-elevated);
+  font-size: 0.72rem;
+  font-weight: 700;
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--text-muted);
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+
+.table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.875rem;
+  vertical-align: middle;
+}
+
+.table tr:last-child td { border-bottom: none; }
+.table tr:hover td { background: var(--bg-elevated); transition: background 0.12s; }
+.selfRow td { background: rgba(245, 166, 35, 0.05); }
+
+/* ── Cells ────────────────────────────────────────────── */
+.idCell   { color: var(--text-muted); font-size: 0.8rem; width: 40px; }
+.uidCell  { color: var(--text-muted); font-size: 0.78rem; font-family: var(--font-display); }
+.emailCell { color: var(--text-secondary); font-size: 0.83rem; }
+
+/* User cell button */
+.userCellBtn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px 0;
+  text-align: left;
+  transition: all 0.15s;
+  width: 100%;
+}
+.userCellBtn:hover .userName { color: var(--accent); }
+.userCellBtn:hover .openIcon { opacity: 1; color: var(--accent); }
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent), var(--accent-blue));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.9rem;
+  color: var(--text-inverse);
+  flex-shrink: 0;
+}
+
+.userInfo { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+
+.userName {
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: var(--text-primary);
+  transition: color 0.15s;
+  white-space: nowrap;
+}
+
+.badges { display: flex; gap: 4px; flex-wrap: wrap; }
+
+.youBadge {
+  font-size: 0.63rem;
+  font-family: var(--font-display);
+  font-weight: 700;
+  background: var(--accent-green-dim);
+  color: var(--accent-green);
+  padding: 1px 7px;
+  border-radius: var(--r-full);
+  display: inline-block;
+}
+
+.openIcon {
+  color: var(--text-muted);
+  opacity: 0;
+  transition: opacity 0.15s, color 0.15s;
+  flex-shrink: 0;
+  margin-left: auto;
+}
+
+/* ── Action cell ──────────────────────────────────────── */
+.actionCell {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.actionBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 12px;
+  border-radius: var(--r-md);
+  font-size: 0.75rem;
+  font-weight: 600;
+  transition: all 0.15s;
+  border: 1px solid transparent;
+  white-space: nowrap;
+}
+
+.infoBtn {
+  background: var(--accent-blue-dim);
+  border-color: rgba(79,142,247,.2);
+  color: var(--accent-blue);
+}
+.infoBtn:hover { background: var(--accent-blue); color: #fff; }
+
+.deleteBtn {
+  background: var(--accent-red-dim);
+  border-color: var(--accent-red);
+  color: var(--accent-red);
+}
+.deleteBtn:hover { background: var(--accent-red); color: #fff; }
+
+.protectedBadge {
+  font-size: 0.73rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* ── Empty ────────────────────────────────────────────── */
+.empty {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--r-xl);
+  padding: 56px 24px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-muted);
+}
+.empty h3 {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+.empty p { font-size: 0.875rem; }
+
+/* ── Responsive ───────────────────────────────────────── */
+@media (max-width: 640px) {
+  .pageTitle { font-size: 1.2rem; }
+  .table th:nth-child(4), .table td:nth-child(4) { display: none; }
+}

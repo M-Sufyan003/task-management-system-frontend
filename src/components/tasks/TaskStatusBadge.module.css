@@ -1,0 +1,9 @@
+.badge { display:inline-flex; align-items:center; gap:5px; font-size:.72rem; font-weight:700; font-family:var(--font-display); padding:3px 10px; border-radius:var(--r-full); letter-spacing:.04em; }
+.badge::before { content:''; width:5px; height:5px; border-radius:50%; }
+.todo     { background:var(--accent-orange-dim); color:var(--accent-orange); }
+.todo::before { background:var(--accent-orange); }
+.progress { background:var(--accent-blue-dim); color:var(--accent-blue); }
+.progress::before { background:var(--accent-blue); animation:pulse 1.2s ease infinite; }
+.done     { background:var(--accent-green-dim); color:var(--accent-green); }
+.done::before { background:var(--accent-green); }
+@keyframes pulse { 0%,100%{opacity:.4} 50%{opacity:1} }

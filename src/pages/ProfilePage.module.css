@@ -1,0 +1,26 @@
+.page { display:flex; flex-direction:column; gap:20px; max-width:640px; }
+
+.card { background:var(--bg-card); border:1px solid var(--border); border-radius:var(--r-xl); padding:28px; }
+
+.cardHeader { display:flex; align-items:center; gap:16px; margin-bottom:24px; }
+.cardHeaderSimple { margin-bottom:24px; }
+.avatar { width:56px; height:56px; border-radius:50%; background:linear-gradient(135deg,var(--accent),var(--accent-blue)); display:flex; align-items:center; justify-content:center; font-family:var(--font-display); font-weight:800; font-size:1.4rem; color:var(--text-inverse); flex-shrink:0; }
+.cardTitle { font-family:var(--font-display); font-size:1.05rem; font-weight:700; margin-bottom:4px; }
+.cardSub { font-size:.82rem; color:var(--text-secondary); }
+
+.form { display:flex; flex-direction:column; gap:14px; }
+.field { display:flex; flex-direction:column; gap:5px; }
+.label { font-size:.78rem; font-weight:600; color:var(--text-secondary); }
+.inputWrap { position:relative; display:flex; align-items:center; }
+.ico { position:absolute; left:12px; color:var(--text-muted); font-size:1rem; pointer-events:none; }
+.input { width:100%; background:var(--bg-elevated); border:1px solid var(--border); border-radius:var(--r-md); color:var(--text-primary); font-size:.9rem; padding:11px 42px 11px 38px; outline:none; transition:border-color .15s, box-shadow .15s; }
+.input:focus { border-color:var(--accent); box-shadow:0 0 0 3px var(--accent-dim); }
+.input::placeholder { color:var(--text-muted); }
+.eyeBtn { position:absolute; right:12px; background:none; border:none; color:var(--text-muted); font-size:1rem; display:flex; align-items:center; padding:4px; }
+.eyeBtn:hover { color:var(--text-secondary); }
+
+.saveBtn { display:inline-flex; align-items:center; gap:8px; align-self:flex-start; background:var(--accent); color:var(--text-inverse); border:none; padding:11px 24px; border-radius:var(--r-md); font-family:var(--font-display); font-weight:700; font-size:.9rem; transition:all .15s; margin-top:4px; min-width:140px; min-height:42px; justify-content:center; }
+.saveBtn:hover:not(:disabled) { opacity:.88; transform:translateY(-1px); box-shadow:0 6px 20px var(--accent-glow); }
+.saveBtn:disabled { opacity:.55; cursor:not-allowed; }
+.spinner { width:16px; height:16px; border:2px solid rgba(0,0,0,.25); border-top-color:var(--text-inverse); border-radius:50%; animation:spin .7s linear infinite; }
+@keyframes spin { to { transform:rotate(360deg); } }

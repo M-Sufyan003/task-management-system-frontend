@@ -1,0 +1,9 @@
+.msg { color:var(--text-secondary); font-size:.9rem; line-height:1.6; margin-bottom:22px; }
+.actions { display:flex; gap:10px; justify-content:flex-end; }
+.cancel { padding:10px 20px; border-radius:var(--r-md); background:none; border:1px solid var(--border); color:var(--text-secondary); font-size:.875rem; transition:all .15s; }
+.cancel:hover { background:var(--bg-elevated); color:var(--text-primary); }
+.confirm { padding:10px 24px; border-radius:var(--r-md); background:var(--accent-red); color:#fff; border:none; font-family:var(--font-display); font-weight:700; font-size:.875rem; transition:all .15s; display:flex; align-items:center; justify-content:center; min-width:90px; min-height:40px; }
+.confirm:hover:not(:disabled) { opacity:.85; }
+.confirm:disabled { opacity:.55; cursor:not-allowed; }
+.spinner { width:15px; height:15px; border:2px solid rgba(255,255,255,.3); border-top-color:#fff; border-radius:50%; animation:spin .7s linear infinite; }
+@keyframes spin { to { transform:rotate(360deg); } }

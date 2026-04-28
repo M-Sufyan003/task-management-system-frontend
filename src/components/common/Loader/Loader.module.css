@@ -1,0 +1,21 @@
+.wrap { display:flex; flex-direction:column; align-items:center; justify-content:center; gap:14px; padding:20px; }
+.full { position:fixed; inset:0; background:var(--bg-base); z-index:9999; }
+.sm .ring { width:36px; height:36px; }
+.md .ring { width:48px; height:48px; }
+.lg .ring { width:64px; height:64px; }
+
+.ring { position:relative; }
+.ring span {
+  position:absolute; inset:0;
+  border-radius:50%;
+  border:2px solid transparent;
+  animation:spin 1.2s cubic-bezier(.5,0,.5,1) infinite;
+}
+.ring span:nth-child(1) { border-top-color:var(--accent); animation-delay:-0.3s; }
+.ring span:nth-child(2) { border-top-color:var(--accent-blue); animation-delay:-0.15s; inset:8px; }
+.ring span:nth-child(3) { border-top-color:var(--accent-green); inset:16px; }
+
+.msg { font-family:var(--font-display); font-size:.75rem; color:var(--text-muted); letter-spacing:.1em; text-transform:uppercase; animation:pulse 1.5s ease infinite; }
+
+@keyframes spin { to { transform:rotate(360deg); } }
+@keyframes pulse { 0%,100% { opacity:.4; } 50% { opacity:1; } }

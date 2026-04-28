@@ -1,0 +1,7 @@
+.layout { display:flex; min-height:100vh; }
+.main { flex:1; margin-left:var(--sidebar-w); min-height:100vh; transition:margin-left .35s var(--ease); }
+.content { padding:calc(var(--topbar-h) + 28px) 28px 40px; min-height:100vh; }
+@media (max-width:768px) {
+  .main { margin-left:0; }
+  .content { padding:calc(var(--topbar-h) + 20px) 16px 32px; }
+}

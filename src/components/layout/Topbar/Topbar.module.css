@@ -1,0 +1,22 @@
+.bar {
+  position:fixed; top:0; left:var(--sidebar-w); right:0;
+  height:var(--topbar-h);
+  background:rgba(9,12,19,.88);
+  backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--border);
+  display:flex; align-items:center; justify-content:space-between;
+  padding:0 24px; z-index:100;
+  transition:left .35s var(--ease);
+}
+.left { display:flex; align-items:center; gap:14px; }
+.menu { background:none; border:none; color:var(--text-secondary); display:none; align-items:center; padding:6px; border-radius:var(--r-sm); transition:color .15s; }
+.menu:hover { color:var(--text-primary); }
+.title { font-family:var(--font-display); font-size:1.05rem; font-weight:700; }
+.right { display:flex; align-items:center; }
+.chip { display:flex; align-items:center; gap:8px; background:var(--bg-elevated); border:1px solid var(--border); border-radius:var(--r-full); padding:4px 12px 4px 4px; }
+.av { width:28px; height:28px; border-radius:50%; background:linear-gradient(135deg,var(--accent),var(--accent-blue)); display:flex; align-items:center; justify-content:center; font-family:var(--font-display); font-weight:800; font-size:.78rem; color:var(--text-inverse); }
+.name { font-size:.83rem; font-weight:500; color:var(--text-secondary); }
+.role { font-size:.68rem; font-family:var(--font-display); font-weight:700; padding:2px 7px; border-radius:var(--r-full); }
+.adminRole { background:var(--accent-dim); color:var(--accent); }
+.userRole { background:var(--accent-blue-dim); color:var(--accent-blue); }
+@media (max-width:768px) { .bar { left:0; padding:0 16px; } .menu { display:flex; } .name { display:none; } }
