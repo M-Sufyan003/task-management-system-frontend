@@ -38,7 +38,8 @@
 
   --r-sm: 6px; --r-md: 12px; --r-lg: 18px; --r-xl: 24px; --r-full: 9999px;
 
-  --font-display: 'Syne', sans-serif;
+  /* --font-display: 'Syne', sans-serif; */
+  --font-display: Verdana, Geneva, Tahoma, sans-serif;
   --font-body: 'DM Sans', sans-serif;
 
   --sidebar-w: 256px;

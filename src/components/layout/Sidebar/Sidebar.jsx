@@ -1,5 +1,6 @@
 import { NavLink, useNavigate } from 'react-router-dom';
-import { MdDashboard, MdChecklist, MdPeople, MdLogout, MdClose, MdBarChart, MdSettings } from 'react-icons/md';
+import { MdDashboard, MdChecklist, MdPeople, MdLogout, MdClose, MdBarChart, MdSettings} from 'react-icons/md';
+import { MdElectricBolt} from "react-icons/md";
 import { RiAdminLine } from 'react-icons/ri';
 import { useAuth } from '../../../context/AuthContext';
 import styles from './Sidebar.module.css';
@@ -33,7 +34,7 @@ const Sidebar = ({ isOpen, onClose }) => {
       <aside className={`${styles.sidebar} ${isOpen ? styles.open : ''}`}>
         <div className={styles.brand}>
           <div className={styles.logo}>
-            <span className={styles.logoMark}>⚡</span>
+            <span className={styles.logoMark}><MdElectricBolt size={25} style={{ color: "orange" }}/></span>
             <span className={styles.logoName}>TaskFlow</span>
           </div>
           <button className={styles.closeBtn} onClick={onClose} aria-label="Close sidebar">
